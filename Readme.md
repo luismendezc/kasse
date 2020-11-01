@@ -26,7 +26,7 @@ Sie söllen diese Dinge berücksichtigen:
 <br>
 * Null oder negative Nummer sind nicht erlaubt.
 * Geld muss mehr als Kosten sein.
-* Wenn Wechselgeld kalkuliert wird, muss weniger als €50 sein"
+* Wenn Wechselgeld kalkuliert wird, muss weniger als €50 sein
 
 Hier können Sie die App Code finden. Ich habe ein Webpage entwickelt. Die Programmiersprachen, die benutzt wurden, waren:
 <br>
