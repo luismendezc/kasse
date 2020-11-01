@@ -1,0 +1,36 @@
+{% extends "wechselgeld/base.html"%}
+{% load static %}
+{% block style_block %}
+<link rel="stylesheet" href="{% static "css/styleWechsel.css"%}?">
+{% endblock %}
+{% block body_block %}
+<!-- Form -->
+<div class="container">
+  <form action="#" class="login-form" onsubmit="return validateFormOnSubmit(this);" >
+    <h1 style="background-color:white">Wechselgeld</h1>
+
+    <div class="txtb">
+      <input type="number" step="0.01" min="0" max="10000" id="kosten">
+      <span data-placeholder="Kosten"></span>
+    </div>
+
+    <div class="txtb">
+      <input type="number" step="0.01" min="0" max="10000" id="geld">
+      <span data-placeholder="Geld"></span>
+    </div>
+
+    <input type="submit" class="logbtn" value="Kalkulieren">
+
+    <div class="bottom-text" id="ergebnis">
+      Ergebnis
+    </div>
+
+  </form>
+</div>
+
+
+
+<script type="text/javascript" src="{% static "js/wechsel.js"%}?"></script>
+
+
+{% endblock %}

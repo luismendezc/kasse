@@ -1,0 +1,112 @@
+{% extends "wechselgeld/base.html"%}
+{% load static %}
+{% block style_block %}
+<link rel="stylesheet" href="{% static "css/styleInformation.css"%}?">
+{% endblock %}
+{% block body_block %}
+
+<!-- Introduction -->
+<div class="container" style="margin-top:50px;">
+  <h3 class="text-center">Werkzeuge dass Sie an der Kasse benutzen könnten!</h3>
+</div>
+<div class="container" style="margin-top:50px;">
+   <img src="{% static "images/euro.png"%}?" class="rounded mx-auto d-block w-25 h-25"  alt="Responsive image">
+ </div>
+
+<div class="w-100" style="position: relative;">
+  <div class="w-100" style="position: absolute; text-align: center;z-index: 5; bottom: 37%;">
+      <h1 style="color: white; font-weight: bold;">Wechselgeld</h1>
+  </div>
+  <div class="w-100" style="height:200px; margin-top:10px;  display: flex; flex-direction: row;">
+    <div class="w-50 h-100" style="background-color: rgb(0,204,255); position: relative;">
+
+      <div class=" w-100 h-25" style="background-color: white; position: absolute; top: 0%; right:0%;"></div>
+    </div>
+    <div class="w-50 h-100" style="background-color: rgb(1,18,44); position: relative;">
+      <div class=" w-100 h-25" style="background-color: white; position: absolute; bottom: 0%; left:0%;"></div>
+
+    </div>
+  </div>
+</div>
+
+<div class="w-100" style="height:10px; background-color:rgb(223,0,36);"></div>
+<!-- Karte -->
+<div class="w-100" style=" background-color: Rgb(1,18,44); display: flex; flex-direction: row;vertical-align: middle; position:relative;">
+  <div class="w-25 h-25" style="position:absolute; background-color:rgb(0,204,2555);"></div>
+  <div class="w-25 h-25" style="position:absolute; background-color:rgb(0,204,2555); left:25%;top:25%;"></div>
+  <div class="w-25 h-25" style="position:absolute; background-color:rgb(0,204,2555); left:50%;top:50%;"></div>
+  <div class="w-25 h-25" style="position:absolute; background-color:rgb(0,204,2555); left:75%;top:75%;"></div>
+  <div class="w-25 h-25" style="position:absolute; background-color:rgb(0,204,2555); top:50%;"></div>
+  <div class="w-25 h-25" style="position:absolute; background-color:rgb(0,204,2555); left:25%;top:75%;"></div>
+  <div class="w-25 h-25" style="position:absolute; background-color:rgb(0,204,2555); left:50%;"></div>
+  <div class="w-25 h-25" style="position:absolute; background-color:rgb(0,204,2555); left:75%;top:25%;"></div>
+  <div class="w-100" style="height:700px; text-align: center; vertical-align: middle; position:relative;">
+    <div class="card" style="width:18rem;  vertical-align: middle; margin:0 auto; top: 20%; border: 4px solid white; box-shadow: 5px 10px black;">
+    <img class="card-img-top" src="{% static "images/kasse.png"%}?" alt="Card image cap" width="50" height="200" style="padding:30px 40px 30px 40px;">
+    <div class="card-body">
+      <h5 class="card-title">Wechselgeld</h5>
+      <p class="card-text">Wechselgeld mit möglichst wenig Münzen zusammen zustellen.</p>
+      <a href="{% url 'wechselgeld:munze' %}" class="btn btn-danger">Mehr sehen</a>
+    </div>
+    </div>
+  </div>
+</div>
+
+<div class="w-100" style="height:10px; background-color:rgb(223,0,36);"></div>
+
+<!-- Information -->
+<div class="w-100  bodyInfo" >
+  <div class="container2">
+    <img src="{% static "images/kassierer.png"%}?" alt="" class="image2" >
+    <div class="accordion-menu2">
+      <div class="item2" id="item1">
+        <a href="#item1" class="title2">
+          <span id="prro">Was machen wir</span>
+          <i class="icon2"></i>
+        </a>
+        <p class="text2">
+          Wir haben nur ein Ziele. Werkzeuge entwickeln, dass an der Kasse helfen könnten. Innerhalb der Corona-19 Zeit haben Wir so viele Herausforeungen zu erfüllen.
+        </p>
+      </div>
+
+      <div class="item2" id="item2">
+        <a href="#item2" class="title2">
+          <span>Information für Sie</span>
+          <i class="icon2"></i>
+        </a>
+        <p class="text2">
+          Sie können kostenlos die App benutzen. Falls Sie an der Kasse arbeiten, könnten Sie unsere Werkzeuge wählen.
+        </p>
+      </div>
+
+      <div class="item2" id="item3">
+        <a href="#item3" class="title2">
+          <span>Werkzeuge</span>
+          <i class="icon2"></i>
+        </a>
+        <p class="text2">
+          ♦ Wechselgeld mit möglichst wenig Münzen. <br>
+Die neue App kann Ihnen helfen!<br>
+Sie haben Probleme mit Wechselgeld an der kasse... Nicht mehr!<br>
+<a href="{% url 'wechselgeld:munze' %}" class="btn btn-danger">Mehr sehen</a>
+        </p>
+      </div>
+
+      <div class="item2" id="item4">
+        <a href="#item4" class="title2">
+          <span>Kontakt</span>
+          <i class="icon2"></i>
+        </a>
+        <p class="text2">
+          Sie können uns ein Email schiken:<br>
+          lemendezc@hotmail.com
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+{% endblock %}
